@@ -1,12 +1,12 @@
 // Basic structure of Dart
 // Dart call and activate only main()
 void main() {
-    // Don't forget to add semicolon at the end
-    print("Hello, world!");
+  // Don't forget to add semicolon at the end
+  print("Hello, world!");
 }
 
 // The var keyword
-void main() {
+void Var() {
   // using var method when the variable is inside the function or method == local variable
   // Two ways of creating variables: 1.var 2.Using types(String, int, ...)
   // Variables can be updated till the type is remained
@@ -15,7 +15,7 @@ void main() {
 }
 
 // Dynamic Type
-void main() {
+void Dynamic() {
   // this var can be any types of variables == Dynamic variable
   dynamic name;
   name = "yellow monkey";
@@ -24,7 +24,7 @@ void main() {
 }
 
 // Nullable Variables
-void main() {
+void Nullable() {
   // This "?(Question mark)" meaning that this String can be String/null
   // Null safety == the specific data/variable may be null
   // By default, all variables == non-nullable
@@ -41,8 +41,8 @@ void main() {
 
 // Final Variables
 // final variable can not be changed
-same as "const"
-void main() {
+// same as "const"
+void Final() {
   final String name = "name";
 
   // Error occurs when you try to change the var
@@ -53,14 +53,14 @@ void main() {
 // help to create variables without any data
 // declare data LATTER
 // Good for when trying to get the data using API
-void main() {
+void Late() {
   late final String name;
   name = "name";
 }
 
 // Constant Variables
 // const ONLY use when you know this variable in """complie-time"""
-void main() {
+void Constant() {
   const name = 'name';
   // Error occurs : Cuz const is only using in complie-time
   //cont API = FetchAPI()
