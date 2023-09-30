@@ -24,7 +24,7 @@ String positionalParameter(String name, int age, String country) {
 
 // 2-2. Named Parameter (Recommend way)
 // Add {} in parameters that made them into named parameter
-String namedParameter({String name, int age, String country}) {
+String namedParameter({String? name, int? age, String? country}) {
   return "Hello $name, you are $age, and come from $country";
 }
 
