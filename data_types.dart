@@ -1,4 +1,4 @@
-// Basic Data Types
+// 1. Basic Data Types
 void DataType() {
   String name = "name";
   bool alive = true;
@@ -10,7 +10,8 @@ void DataType() {
   num x = 12;
 }
 
-// Lists
+//----------------------------------------------------------------------
+// 2. Lists
 void Lists() {
   // Both are same
   // List<int> numbers = [1, 2, 3, 4, ];
@@ -32,7 +33,8 @@ void Lists() {
   print(numbers);
 }
 
-// String Interpolation
+//----------------------------------------------------------------------
+// 3. String Interpolation
 void StringInterpolation() {
   // Syntax for including pure variable
   var name1 = "Paul";
@@ -46,7 +48,8 @@ void StringInterpolation() {
   print(greeting2);
 }
 
-// Collection For
+//----------------------------------------------------------------------
+// 4. Collection For
 void CollectionFor() {
   var oldF = ["Kim", "Lynn"];
   var newF = [
@@ -61,7 +64,8 @@ void CollectionFor() {
   print(newF);
 }
 
-// Maps
+//----------------------------------------------------------------------
+// 5. Maps
 // Same as Dictionary in Python
 void Maps() {
   // When Key is String
@@ -82,12 +86,13 @@ void Maps() {
   };
 }
 
-// Sets
+//----------------------------------------------------------------------
+// 6. Sets
 void main() {
   var nums = {1, 2, 3, 4};
   Set<int> numbers = {5, 6, 7, 8};
 }
-
+//----------------------------------------------------------------------
 // ***********************************
 // Set vs List
 
