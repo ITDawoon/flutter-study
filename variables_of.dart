@@ -1,11 +1,12 @@
-// Basic structure of Dart
+// 1. Basic structure of Dart
 // Dart call and activate only main()
 void main() {
   // Don't forget to add semicolon at the end
   print("Hello, world!");
 }
 
-// The var keyword
+//----------------------------------------------------------------------
+// 2. The var keyword
 void Var() {
   // using var method when the variable is inside the function or method == local variable
   // Two ways of creating variables: 1.var 2.Using types(String, int, ...)
@@ -14,7 +15,8 @@ void Var() {
   String number = "number";
 }
 
-// Dynamic Type
+//----------------------------------------------------------------------
+// 3. Dynamic Type
 void Dynamic() {
   // this var can be any types of variables == Dynamic variable
   dynamic name;
@@ -23,7 +25,8 @@ void Dynamic() {
   name = true;
 }
 
-// Nullable Variables
+//----------------------------------------------------------------------
+// 4. Nullable Variables
 void Nullable() {
   // This "?(Question mark)" meaning that this String can be String/null
   // Null safety == the specific data/variable may be null
@@ -39,7 +42,8 @@ void Nullable() {
   name?.isNotEmpty;
 }
 
-// Final Variables
+//----------------------------------------------------------------------
+// 5. Final Variables
 // final variable can not be changed
 // same as "const"
 void Final() {
@@ -49,7 +53,8 @@ void Final() {
   //name = "losAg"
 }
 
-// Late Variables
+//----------------------------------------------------------------------
+// 6. Late Variables
 // help to create variables without any data
 // declare data LATTER
 // Good for when trying to get the data using API
@@ -58,7 +63,8 @@ void Late() {
   name = "name";
 }
 
-// Constant Variables
+//----------------------------------------------------------------------
+// 7. Constant Variables
 // const ONLY use when you know this variable in """complie-time"""
 void Constant() {
   const name = 'name';
