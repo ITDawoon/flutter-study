@@ -69,3 +69,58 @@ void optinoalPositionalCall() {
 
 //----------------------------------------------------------------------
 // 4. QQ(Question Question) Operator
+// 4-1. QQ Operator
+// LEFT ?? RIGHT
+// IF LEFT==null, return RIGHT
+// else, return LEFT
+String usingQQoperator(String? name) => name?.toUpperCase() ?? "ANNON";
+
+// Same as below
+String usingQsyntax(String? name) =>
+    name != null ? name.toUpperCase() : "ANNON";
+
+String usingIfsyntax(String? name) {
+  if (name != null) {
+    return name.toUpperCase();
+  }
+  ;
+  return "ANNON";
+}
+
+void QQoperatorCall() {
+  usingQQoperator("name");
+  usingQQoperator(null);
+}
+
+// 4-1. QQ Assignment Operator
+// QQ Assignment Operator == ??=
+// IF parameter == null, input defualt value inside the paramteter
+void QQAssignmentOperator() {
+  String? name;
+  name ??= 'Kim';
+  // ERROR: [name] cannot be NULL again after defining it "KIM", so could not call 'another'
+  // To fix, "use name == null" before "name ??= another"
+  name ??= 'another';
+}
+
+//----------------------------------------------------------------------
+// 5. Typdef
+// Create ALIAS of data types for simplify them
+// Help to shorten type definition part
+typedef ListOfInts = List<int>;
+
+// Used typedef function
+List<int> useTypeDef(ListOfInts list) {
+  var reversed = list.reversed;
+  return reversed.toList();
+}
+
+// Origin type
+List<int> BasicFunc(List<int> list) {
+  var reversed = list.reversed;
+  return reversed.toList();
+}
+
+void TypeDefCall() {
+  print(useTypeDef([1, 2, 3]));
+}
