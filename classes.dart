@@ -20,7 +20,7 @@ void ClassBasicStructureCall() {
   // player.name = "Jeong";
 }
 
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------------------
 // 2. Constructors
 // Constructors should have same name with Class
 // and modifying inside the Class
@@ -50,7 +50,7 @@ void constructorsCall() {
   player2.sayHello();
 }
 
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------------------
 // 3. Named Constructor Parameters
 class namedConstructorsParameter {
   final String nm;
@@ -88,7 +88,7 @@ void namedConstructorsParameterCall() {
   );
 }
 
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------------------
 // 4. Named Constructors
 class namedConstructors {
   final String nm;
@@ -139,7 +139,7 @@ void namedConstructorsCall() {
   );
 }
 
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------------------
 // 5. Recap (Using Structured Data that have Key and Value)
 // Named Constructors using Api structured data
 class Recap {
@@ -182,48 +182,73 @@ void Recapmain(List<String> args) {
   });
 }
 
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------------------
 // 6. Cascade Notation
-class Player {
-  String name;
-  int xp;
-  String team;
-
-  Player({required this.name, required this.xp, required this.team});
-
-  void sayHello() {
-    print("Hi my name is $name");
-  }
-}
-
-void main() {
-  // Origin way of change the value
+void cascadeMain() {
+  // Origin way of change the value of Class
   // var kim = Player(name: 'Kim', xp: 1200, team: 'red');
   // kim.name = 'asd';
   // kim.xp = 12000000;
   // kim.team = 'blue';
 
   // Cascade operator
-  var kim = Player(name: 'Kim', xp: 1200, team: 'red')
+  // ".."(double dot) for redefine the value
+  var kim = className(name: 'Kim', xp: 1200, team: 'red')
     ..name = 'asd'
     ..xp = 12000000
     ..team = 'blue'
     ..sayHello();
 }
 
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------------------
 // 7. Enums
+// Enums is for constraint choises
+// Helping to reduce mistyping
+enum Team { red, blue }
 
-//----------------------------------------------------------------------
+enum XPLevel { beginner, medium, pro }
+
+void enumMain() {
+  var potato = className(name: 'potato', xp: 12000, team: Team.blue)
+    ..name = 'kimchi'
+    // Call Enum ==> ""[EnumName].[EnumValue]""
+    ..xp = XPLevel.medium as int
+    ..team = Team.blue
+    ..sayHello();
+
+  var kim = className(name: 'Kim', xp: 1200, team: Team.red)
+    ..name = 'asd'
+    ..xp = XPLevel.pro as int
+    ..team = Team.red
+    ..sayHello();
+}
+
+//------------------------------------------------------------------------------------
 // 8. Abstract Classes
+// Abstract Class allow other class to have which kind of blueprint they should have
+abstract class Human {
+  void walk();
+}
 
-//----------------------------------------------------------------------
+class Player extends Human {
+  late String name;
+  late int xp;
+  late int age;
+
+  void walk() {
+    print("I'm walking");
+  }
+}
+
+//------------------------------------------------------------------------------------
 // 9. Inheritance
 
-//----------------------------------------------------------------------
+
+//------------------------------------------------------------------------------------
 // 10. Mixins
 
-//----------------------------------------------------------------------
+
+//------------------------------------------------------------------------------------
 // Positional vs Named
 //***************************************************
 // Named parameters :
@@ -233,4 +258,4 @@ void main() {
 // Positional parameters :
 // () is for when you want positional parameters,
 //  like X("", 1, true)
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------------------
