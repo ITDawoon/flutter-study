@@ -22,7 +22,8 @@ void ClassBasicStructureCall() {
 
 //----------------------------------------------------------------------
 // 2. Constructors
-// Constructors should have same name with class
+// Constructors should have same name with Class
+// and modifying inside the Class
 class Constructors {
   final String nm;
   int xp;
@@ -42,6 +43,7 @@ class Constructors {
 }
 
 void constructorsCall() {
+  // Create Class' Instance
   var player = Constructors("Kim", 1500);
   player.sayHello();
   var player2 = Constructors("Jeong", 1500);
@@ -140,12 +142,12 @@ void namedConstructorsCall() {
 //----------------------------------------------------------------------
 // 5. Recap (Using Structured Data that have Key and Value)
 // Named Constructors using Api structured data
-class Player {
+class Recap {
   final String name;
   int xp;
   String team;
 
-  Player.fromJson(Map<String, dynamic> playerJson)
+  Recap.fromJson(Map<String, dynamic> playerJson)
       : name = playerJson['name'],
         xp = playerJson['xp'],
         team = playerJson['team'];
@@ -155,7 +157,7 @@ class Player {
   }
 }
 
-void main(List<String> args) {
+void Recapmain(List<String> args) {
   var apiData = [
     {
       "name": "Kim",
@@ -175,39 +177,60 @@ void main(List<String> args) {
   ];
 
   apiData.forEach((playerJson) {
-    var player = Player.fromJson(playerJson);
+    var player = Recap.fromJson(playerJson);
     player.sayHello();
   });
 }
 
 //----------------------------------------------------------------------
 // 6. Cascade Notation
+class Player {
+  String name;
+  int xp;
+  String team;
 
+  Player({required this.name, required this.xp, required this.team});
+
+  void sayHello() {
+    print("Hi my name is $name");
+  }
+}
+
+void main() {
+  // Origin way of change the value
+  // var kim = Player(name: 'Kim', xp: 1200, team: 'red');
+  // kim.name = 'asd';
+  // kim.xp = 12000000;
+  // kim.team = 'blue';
+
+  // Cascade operator
+  var kim = Player(name: 'Kim', xp: 1200, team: 'red')
+    ..name = 'asd'
+    ..xp = 12000000
+    ..team = 'blue'
+    ..sayHello();
+}
 
 //----------------------------------------------------------------------
 // 7. Enums
 
-
 //----------------------------------------------------------------------
 // 8. Abstract Classes
-
 
 //----------------------------------------------------------------------
 // 9. Inheritance
 
-
 //----------------------------------------------------------------------
 // 10. Mixins
-
 
 //----------------------------------------------------------------------
 // Positional vs Named
 //***************************************************
-// Named parameters : 
-// {} is for when you want named parameters, 
+// Named parameters :
+// {} is for when you want named parameters,
 //  like X(name:"", age:1, good:true)
 //***************************************************
-// Positional parameters : 
-// () is for when you want positional parameters, 
+// Positional parameters :
+// () is for when you want positional parameters,
 //  like X("", 1, true)
 //----------------------------------------------------------------------
