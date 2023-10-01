@@ -15,7 +15,7 @@ void callFunction() {
   print(functionBasicStructure("Kim"));
 }
 
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------------------
 // 2. Named Parameters
 // 2-1. Positional parameters(Should avoid to use)
 String positionalParameter(String name, int age, String country) {
@@ -55,7 +55,7 @@ void namedParameterCall() {
   ));
 }
 
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------------------
 // 3. Optional Positional Parameters
 // Use "[]" and give "DefaultValue"
 String optionalPositional(String name, int age, [String? country = 'cuba']) {
@@ -67,7 +67,7 @@ void optinoalPositionalCall() {
   print(result);
 }
 
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------------------
 // 4. QQ(Question Question) Operator
 // 4-1. QQ Operator
 // LEFT ?? RIGHT
@@ -103,7 +103,7 @@ void QQAssignmentOperator() {
   name ??= 'another';
 }
 
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------------------
 // 5. Typdef
 // Create ALIAS of data types for simplify them
 // Help to shorten type definition part

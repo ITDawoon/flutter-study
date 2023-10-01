@@ -5,7 +5,7 @@ void main() {
   print("Hello, world!");
 }
 
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------------------
 // 2. The var keyword
 void Var() {
   // using var method when the variable is inside the function or method == local variable
@@ -15,7 +15,7 @@ void Var() {
   String number = "number";
 }
 
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------------------
 // 3. Dynamic Type
 void Dynamic() {
   // this var can be any types of variables == Dynamic variable
@@ -25,7 +25,7 @@ void Dynamic() {
   name = true;
 }
 
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------------------
 // 4. Nullable Variables
 void Nullable() {
   // This "?(Question mark)" meaning that this String can be String/null
@@ -42,7 +42,7 @@ void Nullable() {
   name?.isNotEmpty;
 }
 
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------------------
 // 5. Final Variables
 // final variable can not be changed
 // same as "const"
@@ -53,7 +53,7 @@ void Final() {
   //name = "losAg"
 }
 
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------------------
 // 6. Late Variables
 // help to create variables without any data
 // declare data LATTER
@@ -63,7 +63,7 @@ void Late() {
   name = "name";
 }
 
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------------------
 // 7. Constant Variables
 // const ONLY use when you know this variable in """complie-time"""
 void Constant() {
