@@ -204,33 +204,33 @@ void cascadeMain() {
 // 7. Enums
 // Enums is for constraint choises
 // Helping to reduce mistyping
-enum Team { red, blue }
+enum Teamm { red, blue }
 
 enum XPLevel { beginner, medium, pro }
 
 void enumMain() {
-  var potato = className(name: 'potato', xp: 12000, team: Team.blue)
+  var potato = className(name: 'potato', xp: 12000, team: Teamm.blue)
     ..name = 'kimchi'
     // Call Enum ==> ""[EnumName].[EnumValue]""
     ..xp = XPLevel.medium as int
-    ..team = Team.blue
+    ..team = Teamm.blue
     ..sayHello();
 
-  var kim = className(name: 'Kim', xp: 1200, team: Team.red)
+  var kim = className(name: 'Kim', xp: 1200, team: Teamm.red)
     ..name = 'asd'
     ..xp = XPLevel.pro as int
-    ..team = Team.red
+    ..team = Teamm.red
     ..sayHello();
 }
 
 //--------------------------------------------------------------------------------------------
 // 8. Abstract Classes
 // Abstract Class allow other class to have which kind of blueprint they should have
-abstract class Human {
+abstract class Humann {
   void walk();
 }
 
-class Player extends Human {
+class Man extends Humann {
   late String name;
   late int xp;
   late int age;
@@ -241,12 +241,59 @@ class Player extends Human {
 }
 
 //--------------------------------------------------------------------------------------------
-// 9. Inheritance
+// 9. Inheritance ***** IMPORTANT *****
+// using "[extends]" for Inheritance
+// "[super]" class == Parent class that extended from(e.g., Humannn)
+class Humannn {
+  final String name;
+  Humannn({required this.name}); // Being called
+  void sayHello() {
+    print("Hi my name is $name");
+  }
+}
 
+enum Team { blue, red }
+
+class Playerrr extends Humannn {
+  final Team team;
+
+  Playerrr({
+    required this.team,
+    required String name,
+    // with "super" keyword, helps to connect with Parent class(Humannn) where extended from
+  }) : super(name: name); // Call Humannn Constructor properties(name)
+
+  // override == override the properties/method in ParentClass(e.g., override sayHello() from Humannn Class)
+  @override
+  void sayHello() {
+    super.sayHello();
+    print('and I play for ${team}');
+  }
+}
+
+void main() {
+  var player = Playerrr(
+    team: Team.red,
+    name: 'Kim',
+  );
+}
 
 //--------------------------------------------------------------------------------------------
 // 10. Mixins
+// Mixins == Class that doesn't have Constructors
+// Use when add properties into Class
+class Strong {
+  final double strngthLevel = 1500.99;
+}
 
+class QuickRunner {
+  void runQuick() {
+    print("runnnnnnn");
+  }
+}
+
+// Use "[with]", bring "properties" and "method" from other Classes
+class Player with Strong, QuickRunner {}
 
 //--------------------------------------------------------------------------------------------
 // Positional vs Named
